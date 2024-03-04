@@ -1,6 +1,6 @@
 # Simple Note-Taking API
 
-This project is a simple note-taking API built using Django and Django REST Framework. It allows users to create, fetch, query, and update notes. The API does not include user management.
+This project is a simple note-taking API built using Django and Django REST Framework. It allows users to create, fetch, query, and update notes.
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ This project is a simple note-taking API built using Django and Django REST Fram
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/aman2871/note-taking-project/tree/main
    ```
 
 2. Navigate to the project directory:
@@ -27,7 +27,7 @@ This project is a simple note-taking API built using Django and Django REST Fram
 3. Install the required dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 ### Database Setup
