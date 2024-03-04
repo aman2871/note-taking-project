@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "bc1fa018-6be0-42b9-be87-c6fdfa7b42db",
+		"name": "Note-Taking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33375179"
+	},
+	"item": [
+		{
+			"name": "Create Note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Note\",\n    \"body\": \"This is another new note.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/notes/"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Note by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/notes/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Query Notes by Title Substring",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/notes?title=updated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notes"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "updated"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8000/notes/1"
+			},
+			"response": []
+		}
+	]
+}
