@@ -10,6 +10,12 @@ class NoteListCreateView(generics.ListCreateAPIView):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
 
+    def get_queryset(self):
+        title_substring = self.request.query_params.get('title', None)
+        if title_substring:
+            return Note.objects.filter(title__icontains=title_substring)
+        return super().get_queryset()
+
     def post(self, request, *args, **kwargs):
         try:
             serializer = self.get_serializer(data=request.data)
